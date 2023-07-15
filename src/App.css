@@ -1,0 +1,117 @@
+:root {
+    --text: #fafafa;
+    --background: #181816;
+    --secondary-b: #232321;
+    --primary: #f3be12;
+    --secondary-g: #12280b;
+    --accent: #a5c0ba;
+    --white: white;
+    --n: 5px;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--background);
+    color: var(--text);
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+h6 {
+    font-size: 64px;
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+span {
+    margin-left: 2px;
+    line-height: 3rem;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 60px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.type-c>p,
+.type-b>p {
+    font-size: 34px;
+}
+
+.type-c {
+    width: 90%;
+    position: relative;
+    word-break: break-all;
+    filter: blur(var(--n));
+    transition: filter 200ms;
+}
+
+.focus {
+    position: absolute;
+    z-index: 10;
+    top: 40%;
+    font-size: 34px;
+}
+
+.type-b>p:last-child::after {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 34px;
+    margin-bottom: -2px;
+    background-color: yellow;
+    animation: blink-animation 1.5s steps(2) infinite;
+}
+
+@keyframes blink-animation {
+    0% {
+        opacity: 0;
+    }
+}
+
+.type-b {
+    position: absolute;
+    display: block;
+    width: auto;
+    height: auto;
+    top: 0px;
+    left: 0px;
+}
+
+
+.in {
+    opacity: 0;
+    cursor: default;
+}
+
+.correct {
+    color: var(--accent);
+}
+
+.incorrect {
+    color: red;
+}
+
+.incorrect-f {
+    background-color: red;
+}

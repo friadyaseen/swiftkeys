@@ -1,8 +1,15 @@
 import './App.css';
+import Main from './Main'
 
 function App() {
+  console.log("rendered")
   return (
-    <h6>HELLO, WORLD</h6>
+    <>
+      <div className='header'>
+        <p>SwiftKeys</p>
+      </div>
+      <Main />
+    </>
   );
 }
 
